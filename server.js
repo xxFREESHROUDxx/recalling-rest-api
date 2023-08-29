@@ -10,8 +10,10 @@ app.use(express.json());
 
 // Importing routes
 const authRouter = require('./routes/auth');
+const messagesRouter = require('./routes/messages');
 
 // Setup all the routes
+app.use('/api/messages', messagesRouter);
 app.use('/api/auth', authRouter);
 
 // At last starting the server
