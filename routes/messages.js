@@ -6,12 +6,12 @@ const auth = require('../middleware/auth');
 const { admin, developer, client } = require('../middleware/roles');
 
 // Creating a counter for generating ID
-let counter = 100;
+let counter = 101;
 
 // Creating a dummy data to show as a message
 let messages = [
   {
-    id: counter,
+    id: 100,
     name: 'Baibhav KC',
     content:
       'This is your developer. I recently created this api to have more understanding of jwt token as well as creating a secured REST API using Node and Express',

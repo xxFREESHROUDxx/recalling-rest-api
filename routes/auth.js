@@ -20,13 +20,17 @@ router.post('/', async (req, res) => {
   // Getting the user from the database(right now data is coming from users), if the user is not there then we return an error
   let user = users.find((user) => user.email === req.body.email);
   if (!user) {
-    throw new Error('Invalid email or password. Please try again!');
+    return res.status(401).send({
+      error: 'Invalid email. Please try again with valid email.',
+    });
   }
 
   // Now comparing the password with the password in the database
   const valid = await bcrypt.compare(req.body.password, user.password);
   if (!valid) {
-    throw new Error('Invalid email or password. Please try again!');
+    return res.status(401).send({
+      error: 'Invalid Password. Please try again with valid password.',
+    });
   }
 
   // Creating a jwt token for more security

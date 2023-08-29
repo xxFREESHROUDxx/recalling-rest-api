@@ -3,7 +3,7 @@ const express = require('express');
 
 // Setup the express server
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // Importing middlewares into express
 app.use(express.json());
