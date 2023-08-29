@@ -12,8 +12,8 @@ router.post('/', async (req, res) => {
   const users = [
     {
       email: 'baibhavkc11@gmail.com',
-      password: '',
-      roles: ['admin', 'developer', 'user'],
+      password: '$2b$11$cHyxTXbU3EVxwrcgwxt/l.cwKV1iHGRsgshCbVAwbkBD9rMi8A4hW',
+      roles: ['admin', 'developer', 'client'],
     },
   ];
 
@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
   );
 
   res.send({
-    ok: true,
+    success: true,
     token: token,
   });
 });
