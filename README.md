@@ -12,6 +12,7 @@ Trying to create a secured REST API using Node and Express. Revising the things 
 ### For Authentication
 
 Currently you can open Postman or similar API platforms and send POST request to [localhost:5000/api/auth] and put the following json data in body:
+```json
 {  
   "email": "baibhavkc11@gmail.com",
   "password": "Qwerty@123"
