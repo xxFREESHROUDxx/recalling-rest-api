@@ -17,6 +17,7 @@ Currently you can open Postman or similar API platforms and send POST request to
   "email": "baibhavkc11@gmail.com",
   "password": "Qwerty@123"
 }
+```
 
 Right now, database is not used to store the data so dummy data has been created. But ff you want to make changes to the dummy data just go to the project folder : routes/auth.js and make changes to the users variable.
 
